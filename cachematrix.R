@@ -1,7 +1,11 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## Takes a matrix object as an input and returns a list of 4 functions which do the following:
+## set: assigns a new matrix to the matrix variable x, and assigns NULL to the inverted matrix variable
+## get: returns the matrix (not inverted)
+## setinverse: assigns a new matrix to the inverted matrix variable i.
+## getinverse: returns the inverted matrix variable i.
 
 makeCacheMatrix <- function(x = matrix()) {
   i = NULL
@@ -18,7 +22,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function takes the output of makeCacheMatrix as its input
+## and returns an associated inverted matrix. The first time it is run,
+## it will cache the inverted matrix using the setinverse function created in makeCacheMatrix
+## so that the caches version can be returned upon subsequent calls instead of running solve on each call.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
